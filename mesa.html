@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ana y sus creaciones</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="mesa">
+  <a href="inicio.html" class="home-button">
+    <img src="img/home.png" alt="Volver">
+  </a>
+ 
+  <div class="papel">
+    <img src="img/Papel.png" alt="Papel" class="image image-34" data-toggle="modal" data-target="#imagenModal">
+  </div>
+
+
+  <div class="textomesa">
+    En la mesa del comedor, Ana estaba rodeada de papeles de colores, tijeras y pegamento.<br>
+    Con una concentración absoluta, recortaba con cuidado las formas que se convertirían<br>
+     en sus muñecas de papel.<br>
+    Cada corte y pliegue transformaba el papel en personajes llenos de vida.<br>
+    Le gustaba crear mundos a partir de simples hojas: casitas, muebles diminutos,<br>
+     y vestidos elegantes para sus muñecas.<br>
+    En su imaginación, esas figuras de papel vivían historias emocionantes,<br>
+     y cada creación era una nueva oportunidad para<br>
+     dejar volar su creatividad.
+  </div>
+
+
+  <!-- Modal para la imagen descargable -->
+  <div class="modal fade" id="imagenModal" tabindex="-1" role="dialog" aria-labelledby="imagenModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="imagenModalLabel">Divertite con este juguete recortable!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="img/recortable.jpeg" class="img-fluid" alt="Imagen Recortable">
+        </div>
+        <div class="modal-footer">
+          <a href="img/recortable.jpeg" download="recortable.jpg" class="btn btn-primary">Descargar</a>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <audio autoplay loop volume="0.2">
+    <source src="img/papeleria.mp3.mp4" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

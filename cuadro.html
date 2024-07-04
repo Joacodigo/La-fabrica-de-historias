@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería con Bootstrap</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="cuadro">
+    <a href="inicio.html" class="home-button">
+        <img src="img/home.png" alt="Volver">
+    </a>
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="img/Foto de ana 1.jpeg" data-toggle="modal" data-target="#imageModal" data-image="img/Foto de ana 1.jpeg">
+                    <img src="img/Foto de ana 1.jpeg" class="img-fluid mb-4" alt="Imagen 1">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="img/Foto de ana 2.jpeg" data-toggle="modal" data-target="#imageModal" data-image="img/Foto de ana 2.jpeg">
+                    <img src="img/Foto de ana 2.jpeg" class="img-fluid mb-4" alt="Imagen 2">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="img/Foto de ana 3.jpeg" data-toggle="modal" data-target="#imageModal" data-image="img/Foto de ana 3.jpeg">
+                    <img src="img/Foto de ana 3.jpeg" class="img-fluid mb-4" alt="Imagen 3">
+                </a>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <h1 class="text-center mb-4">Video desde YouTube</h1>
+            <div class="embed-responsive embed-responsive-16by9 videito">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vFiCJzYvtCk?autoplay=1&loop=1&playlist=vFiCJzYvtCk" allowfullscreen></iframe>
+            </div>
+          </div>
+    </div>
+
+
+    <!-- Modal para la vista previa de las imágenes -->
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img id="imagePreview" src="" class="img-fluid" alt="Vista previa de la imagen">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            $('#imageModal').on('show.bs.modal', function(event) {
+                var button = $(event.relatedTarget);
+                var imageSrc = button.data('image');
+                var modal = $(this);
+                modal.find('#imagePreview').attr('src', imageSrc);
+            });
+        });
+    </script>
+</body>
+</html>
